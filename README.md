@@ -4,7 +4,7 @@ An implementation of a NP-complete puzzle, Sudoku, that allows players to play t
 Implements backtracking to solve the sudoku puzzle and allow for users to verify their board.
 
 ## Instructions on how to run the program
-- You can run this project by clicking this demo link: https://sudoku-cs325-nakim.netlify.app/
+- You can run this project by clicking this demo link: https://skim-sudoku.netlify.app/
 - You can run this project by downloading a zip file of the project on github, unzip the file, and opening the "index.html" file in your local browser.
 
 ## Instructions on how to play the game
