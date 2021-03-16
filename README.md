@@ -1,7 +1,7 @@
 # Sudoku
 
 An implementation of a NP-complete puzzle, Sudoku, that allows players to play the game and have their board solution verified. 
-Implements backtracking to solve the sudoku puzzle and allow for users to verify their board.
+Implements backtracking algorithm to solve the sudoku puzzle and allow for users to verify their board.
 
 ## Instructions on how to run the program
 - You can run this project by clicking this demo link: https://skim-sudoku.netlify.app/
