@@ -1,16 +1,17 @@
+// Sudoku Board for puzzle 
+var board = [];
+// locate  row of table and set up array to store data
+$('#table').find('tr').each(function () {
+  var arr = [];
+  // store each input from each table row cell and append to array
+  $(this).find('input').each(function () {
+    arr.push($(this).val());
+  });
+  // store inputted array in grid var
+  board.push(arr);
+});
 
-// Sudoku Board for one puzzle 
-var board = [
-  [8, 0, 0, 9, 3, 0, 0, 0, 2],
-  [0, 0, 9, 0, 0, 0, 0, 4, 0],
-  [7, 0, 2, 1, 0, 0, 9, 6, 0],
-  [2, 0, 0, 0, 0, 0, 0, 9, 0],
-  [0, 6, 0, 0, 0, 0, 0, 7, 0],
-  [0, 7, 0, 0, 0, 6, 0, 0, 5],
-  [0, 2, 7, 0, 0, 8, 4, 0, 6],
-  [0, 3, 0, 0, 0, 0, 5, 0, 0],
-  [5, 0, 0, 0, 6, 2, 0, 0, 8]
-];
+
 
 // Check each row to see if there are duplicates/valid input
 function rows(board, row, num) {
@@ -181,24 +182,18 @@ function check() {
     grid.push(array);
   });
 
+
   // Checks to see if user's input is a valid/invalid solution and sends alert message
   function validate() {
-    for (let i = 0; i < 9; i++) {
-      for (let j = 0; j < 9; j++) {
-        // if the solution board array is the same as the user's input array, alert "correct/solved"
-        if (board[i][j] === grid[i][j]) {
-          reset();
-          return "CORRECT";
-        }
-        // if the solution board array is different than the user's input array, alert"incorrect"
-        if (board[i][j] != grid[i][j]) {
-          reset();
-          return "INCORRECT TRY AGAIN";
-        }
-      }
-    }
+    if (board.sort().join(',') === grid.sort().join(',')) {
+      reset();
+      return "CORRECT";
+    } else
+      reset();
+    return "INCORRECT TRY AGAIN";
   }
   //send alert message displaying if the user's input is correct or incorrect
   var message = validate();
   alert(message);
+
 }
