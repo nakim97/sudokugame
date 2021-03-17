@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Style Sudoku Board Grid -->
+    <table id="table">
+        <!-- Set up the title -->
+        <h2 class="title"> SUDOKU </h2>
+        <tr>
+            <td><input class="cell" id="cell-00" type="number" value="8" disabled></td>
+            <td><input class="cell" id="cell-01" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-02" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-03" type="number" value="9" disabled></td>
+            <td><input class="cell" id="cell-04" type="number" value="3" disabled></td>
+            <td><input class="cell" id="cell-05" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-06" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-07" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-08" type="number" value="2" disabled></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-10" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-11" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-12" type="number" value="9" disabled></td>
+            <td><input class="cell" id="cell-13" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-14" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-15" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-16" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-17" type="number" value="4" disabled></td>
+            <td><input class="cell" id="cell-18" type="number" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-20" type="number" value="7" disabled></td>
+            <td><input class="cell" id="cell-21" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-22" type="number" value="2" disabled></td>
+            <td><input class="cell" id="cell-23" type="number" value="1" disabled></td>
+            <td><input class="cell" id="cell-24" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-25" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-26" type="number" value="9" disabled></td>
+            <td><input class="cell" id="cell-27" type="number" value="6" disabled></td>
+            <td><input class="cell" id="cell-28" type="number" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-30" type="number" value="2" disabled></td>
+            <td><input class="cell" id="cell-31" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-32" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-33" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-34" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-35" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-36" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-37" type="number" value="9" disabled></td>
+            <td><input class="cell" id="cell-38" type="number" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-40" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-41" type="number" value="6" disabled></td>
+            <td><input class="cell" id="cell-42" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-43" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-44" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-45" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-46" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-47" type="number" value="7" disabled></td>
+            <td><input class="cell" id="cell-48" type="number" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-50" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-51" type="number" value="7" disabled></td>
+            <td><input class="cell" id="cell-52" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-53" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-54" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-55" type="number" value="6" disabled></td>
+            <td><input class="cell" id="cell-56" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-57" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-58" type="number" value="5" disabled></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-60" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-61" type="number" value="2" disabled></td>
+            <td><input class="cell" id="cell-62" type="number" value="7" disabled></td>
+            <td><input class="cell" id="cell-63" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-64" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-65" type="number" value="8" disabled></td>
+            <td><input class="cell" id="cell-66" type="number" value="4" disabled></td>
+            <td><input class="cell" id="cell-67" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-68" type="number" value="6" disabled></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-70" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-71" type="number" value="3" disabled></td>
+            <td><input class="cell" id="cell-72" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-73" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-74" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-75" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-76" type="number" value="5" disabled></td>
+            <td><input class="cell" id="cell-77" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-78" type="number" min="1" max="9"></td>
+        </tr>
+        <tr>
+            <td><input class="cell" id="cell-80" type="number" value="5" disabled></td>
+            <td><input class="cell" id="cell-81" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-82" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-83" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-84" type="number" value="6" disabled></td>
+            <td><input class="cell" id="cell-85" type="number" value="2" disabled></td>
+            <td><input class="cell" id="cell-86" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-87" type="number" min="1" max="9"></td>
+            <td><input class="cell" id="cell-88" type="number" value="8" disabled></td>
+        </tr>
+    </table>
+    <!-- Set up the buttons -->
+    <div class="button-container">
+        <!-- Button to check if user's input is correct/incorrect -->
+        <button id="check" onclick="check()"> Check </button>
+        <!-- Button to reset board when clicked -->
+        <button id="reset" onclick="reset()"> Reset </button>
+        <!-- Button to reveal solution when clicked -->
+        <button id="solution" onclick="solution()">Solution</button>
+    </div>
+    <!-- Button to go back to sudoku solver-->
+    <button id="backBtn" onclick="location.href ='index.html'"> BACK </button>
+    
+    <script src="scripts.js"></script>
+</body>
+
+
+</html>
