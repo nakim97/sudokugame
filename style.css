@@ -91,7 +91,8 @@ td input {
 }
 #reset,
 #solution,
-#check {
+#check,
+#puzzle{
   display: inline-block;
   background-color: transparent;
   margin-top: 30px;
@@ -100,4 +101,19 @@ td input {
   margin-right: 20px;
   width: 120px;
   border: 1px solid black;
+}
+#reset {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#backBtn {
+  background-color: transparent;
+  font-family: "Pangolin", cursive;
+  font-size: 30px;
+  width: 120px;
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
 }
