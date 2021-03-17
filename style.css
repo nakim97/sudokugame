@@ -101,6 +101,7 @@ td input {
   margin-right: 20px;
   width: 120px;
   border: 1px solid black;
+  margin-bottom: 20px;
 }
 #reset {
   margin-left: 20px;
