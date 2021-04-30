@@ -4,6 +4,10 @@ An implementation of a NP-complete puzzle, Sudoku, that allows players to input 
 Players can also play a sudoku puzzle if the 'puzzle' button is pressed. 
 Implements backtracking algorithm to solve the sudoku puzzle and allow for users to verify their board.
 
+## TechStack
+
+HTML, CSS, JavaScript, jQuery
+
 ## Instructions on how to run the program
 - You can run this project by clicking this demo link: https://skim-sudoku.netlify.app/
 - You can run this project by downloading a zip file of the project from this github repo, unzip the file, and opening the "index.html" file in your local browser.
